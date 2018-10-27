@@ -1,14 +1,68 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Ionic Blank
+      Asistencia CLEIN
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+
+  <button ion-button icon-start block round (click)="login()" >
+    <ion-icon name="log-in">
+    </ion-icon>
+    Login Administrador {{id_admin}}
+    <ion-icon *ngIf="isDefined(this.id_admin)" name="checkmark">
+    </ion-icon>
+  </button>
+
+  <!--<ion-item>-->
+    <!--<ion-label>Día</ion-label>-->
+    <!--<ion-select [(ngModel)]="dia" multiple="false" interface="action-sheet">-->
+      <!--<ion-option>Lunes-->
+      <!--</ion-option>-->
+      <!--<ion-option>Martes-->
+      <!--</ion-option>-->
+      <!--<ion-option>Miércoles-->
+      <!--</ion-option>-->
+      <!--<ion-option>Jueves-->
+      <!--</ion-option>-->
+      <!--<ion-option>Viernes-->
+      <!--</ion-option>-->
+    <!--</ion-select>-->
+  <!--</ion-item>-->
+  <!--<ion-item>-->
+    <!--<ion-label>Hora</ion-label>-->
+    <!--<ion-select [(ngModel)]="hora" multiple="false" interface="action-sheet">-->
+      <!--<ion-option>9:00-->
+      <!--</ion-option>-->
+      <!--<ion-option>10:00-->
+      <!--</ion-option>-->
+      <!--<ion-option>11:00-->
+      <!--</ion-option>-->
+      <!--<ion-option>12:00-->
+      <!--</ion-option>-->
+    <!--</ion-select>-->
+  <!--</ion-item>-->
+
+
+
+  <ion-item>
+    <ion-label>Seleccionar Actividad</ion-label>
+    <ion-select [(ngModel)]="actividadseleccionada" multiple="false" interface="action-sheet">
+      <ion-option *ngFor="let actividad of actividades" [value]="actividad.id">{{actividad.titulo}}</ion-option>
+    </ion-select>
+  </ion-item>
+
+
+
+  <ion-footer>
+    <ion-toolbar>
+      <button ion-button icon-start block round (click)="scanOnclick()" >
+        <ion-icon name="qr-scanner">
+        </ion-icon> Escanear QR
+      </button>
+    </ion-toolbar>
+  </ion-footer>
+
 </ion-content>
