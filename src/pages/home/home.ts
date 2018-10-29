@@ -25,6 +25,9 @@ export class HomePage {
               private qrScanner: QRScanner) {
 
     this.actividades = [
+      {id:21, titulo:"Rally Integración"},
+      {id:22, titulo:"Inauguración"},
+      {id:23, titulo:"Apertura"},
       {id:1, titulo:"Transforma tu idea en un modelo de negocio exitoso"},
       {id:2,titulo:"Aplicación del concepto de gamificación en el sistema de gestión de relación con los clientes CRM para la pequeña y mediana empresa PYME."},
       {id:3,titulo:"Sistematización de la Inteligencia competitiva en las telecomunicaciones"},

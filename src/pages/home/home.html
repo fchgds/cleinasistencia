@@ -48,8 +48,7 @@
 
 
   <ion-item>
-    <ion-label>Seleccionar Actividad</ion-label>
-    <ion-select [(ngModel)]="actividadseleccionada" multiple="false" interface="action-sheet">
+    <ion-select [(ngModel)]="actividadseleccionada" multiple="false" interface="action-sheet" style="width:100%;max-width:100%">
       <ion-option *ngFor="let actividad of actividades" [value]="actividad.id">{{actividad.titulo}}</ion-option>
     </ion-select>
   </ion-item>
