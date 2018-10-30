@@ -14,6 +14,7 @@ import {HomePage} from "../home/home";
 export class LoginPage {
   login = { username: '', password: '' };
   submitted = false;
+  isenabled:boolean=true;
 
   constructor(public navCtrl: NavController,
               private toastCtrl: ToastController,
@@ -31,6 +32,7 @@ export class LoginPage {
     if (form.valid) {
       let loading = this.loadingController.create({ content: 'Ingresando' });
       loading.present();
+      this.isenabled=false;
       this.authService.loginWithEmail(this.login).then(data => {
         if (data.success == true) {
           this.authService.isLogged = true;

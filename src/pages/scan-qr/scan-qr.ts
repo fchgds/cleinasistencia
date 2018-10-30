@@ -3,7 +3,6 @@ import {IonicPage, NavController, NavParams, ToastController, ViewController} fr
 import {QRScanner, QRScannerStatus} from "@ionic-native/qr-scanner";
 import {Subscription} from "rxjs";
 import {AsistenciaService} from "../../providers/asistencia-service";
-import {HomePage} from "../home/home";
 
 /**
  * Generated class for the ScanQrPage page.
@@ -18,9 +17,7 @@ import {HomePage} from "../home/home";
   templateUrl: 'scan-qr.html',
 })
 export class ScanQrPage {
-  private isBackMode: boolean = true;
-  private isFlashLightOn: boolean = false;
-  private scanSub: Subscription;
+  public scanSub: Subscription;
   public actividad:String;
   public id_admin:Number;
 

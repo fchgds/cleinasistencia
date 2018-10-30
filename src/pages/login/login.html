@@ -32,7 +32,7 @@
 
 		<ion-row responsive-sm>
 			<ion-col>
-				<button ion-button (click)="onLogin(loginForm)" type="submit" block>Iniciar</button>
+				<button ion-button (click)="onLogin(loginForm)" type="submit" id="loginButton" [disabled]="!isenabled" block>Iniciar</button>
 			</ion-col>
 		</ion-row>
 	</form>

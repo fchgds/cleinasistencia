@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import {NavController, ToastController, ModalController, NavParams} from 'ionic-angular';
 import { QRScanner, QRScannerStatus } from '@ionic-native/qr-scanner';
-import {AsistenciaService} from "../../providers/asistencia-service";
 import {LoginPage} from "../login/login";
 
 @Component({
@@ -21,18 +20,17 @@ export class HomePage {
               public navParams: NavParams,
               private toastCtrl: ToastController,
               private modalController: ModalController,
-              private asistenciaService: AsistenciaService,
               private qrScanner: QRScanner) {
 
     this.actividades = [
-      {id:21, titulo:"Rally Integración"},
-      {id:22, titulo:"Inauguración"},
-      {id:23, titulo:"Apertura"},
       {id:1, titulo:"Transforma tu idea en un modelo de negocio exitoso"},
-      {id:2,titulo:"Aplicación del concepto de gamificación en el sistema de gestión de relación con los clientes CRM para la pequeña y mediana empresa PYME."},
-      {id:3,titulo:"Sistematización de la Inteligencia competitiva en las telecomunicaciones"},
-      {id:4,titulo:"Habia una vez start up's….lejos de silicon valley"},
-      {id:5,titulo:"Redes neuronales artificales para el pronostico de la demanda."}
+      {id:8, titulo:"Uso de la planificación  y control de la producción en empresas pymes exponiendo el caso de la empresa Atabex S.R.L"},
+      {id:23, titulo:"Ponencia Magistral Martes 9:45"},
+      {id:14, titulo:"Taller Ventas Para Emprendedores"},
+      {id:15,titulo:"Taller Diseño productos para emprendedores"},
+      {id:24,titulo:"Ponencia Magistral Martes 14:30"},
+      {id:25,titulo:"Caso de Éxito Martes 15:30"},
+      {id:26,titulo:"Noche de Naciones"}
       ];
     this.id_admin=0;
     this.id_admin = this.navParams.get('id_admin');
@@ -104,10 +102,15 @@ export class HomePage {
     (window.document.querySelector('ion-app') as HTMLElement).classList.remove('cameraView');
   }
 
-  test()
-  {
-    this.asistenciaService.registrarAsistencia(314,this.actividadseleccionada,this.id_admin);
+  listParticipantes() {
+    if (typeof this.actividadseleccionada != 'undefined') {
+      window.open('https://www.clein.org/admin/asistencia.php?idactividad=' + this.actividadseleccionada);
+    }
+    else {
+      this.presentToast("Seleccionar Actividad");
+    }
   }
+
 
   login()
   {
