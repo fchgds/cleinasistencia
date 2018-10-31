@@ -23,14 +23,13 @@ export class HomePage {
               private qrScanner: QRScanner) {
 
     this.actividades = [
-      {id:1, titulo:"Transforma tu idea en un modelo de negocio exitoso"},
-      {id:8, titulo:"Uso de la planificación  y control de la producción en empresas pymes exponiendo el caso de la empresa Atabex S.R.L"},
-      {id:23, titulo:"Ponencia Magistral Martes 9:45"},
-      {id:14, titulo:"Taller Ventas Para Emprendedores"},
-      {id:15,titulo:"Taller Diseño productos para emprendedores"},
-      {id:24,titulo:"Ponencia Magistral Martes 14:30"},
-      {id:25,titulo:"Caso de Éxito Martes 15:30"},
-      {id:26,titulo:"Noche de Naciones"}
+      {id:27,titulo:"Ponencia Magistral Miércoles 9:45"},
+      {id:16, titulo:"Taller Liderazgo como Ventaja Competitiva"},
+      {id:17,titulo:"Taller PMBok vs SCRUMbook"},
+      {id:28,titulo:"Ponencia Magistral Miércoles 14:30"},
+      {id:4,titulo:"Bloque Ponencias Estudiantiles, Había una vez ..."},
+      {id:6,titulo:"Bloque Ponencias Estudiantiles, Diseño de marcos oculares ..."},
+      {id:29,titulo:"Fiesta Dominicana"}
       ];
     this.id_admin=0;
     this.id_admin = this.navParams.get('id_admin');
