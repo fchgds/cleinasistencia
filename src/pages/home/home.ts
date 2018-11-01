@@ -23,13 +23,15 @@ export class HomePage {
               private qrScanner: QRScanner) {
 
     this.actividades = [
-      {id:27,titulo:"Ponencia Magistral Miércoles 9:45"},
-      {id:16, titulo:"Taller Liderazgo como Ventaja Competitiva"},
-      {id:17,titulo:"Taller PMBok vs SCRUMbook"},
-      {id:28,titulo:"Ponencia Magistral Miércoles 14:30"},
-      {id:4,titulo:"Bloque Ponencias Estudiantiles, Había una vez ..."},
-      {id:6,titulo:"Bloque Ponencias Estudiantiles, Diseño de marcos oculares ..."},
-      {id:29,titulo:"Fiesta Dominicana"}
+      {id:11,titulo:"Diseño de layout para el almacen de productos terminados del ingenio azucarero de Imbadura Ecuador"},
+      {id:13,titulo:"Propuesta de plataforma de pagina web como modelo de negocio"},
+      {id:30,titulo:"Ponencia Magistral Jueves 9:45"},
+      {id:16,titulo:"Taller 3P, Filosofía Lean en tus manos"},
+      {id:17,titulo:"Taller Design Thinking and Lean Six Sigma"},
+      {id:31,titulo:"Ponencia Magistral Jueves 14:30"},
+      {id:32,titulo:"Caso de Éxito Jueves 15:30"},
+      {id:33,titulo:"Caso de Éxito Jueves 17:00"},
+      {id:34,titulo:"Party de Marquesina"}
       ];
     this.id_admin=0;
     this.id_admin = this.navParams.get('id_admin');
