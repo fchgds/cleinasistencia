@@ -23,15 +23,17 @@ export class HomePage {
               private qrScanner: QRScanner) {
 
     this.actividades = [
-      {id:11,titulo:"Diseño de layout para el almacen de productos terminados del ingenio azucarero de Imbadura Ecuador"},
-      {id:13,titulo:"Propuesta de plataforma de pagina web como modelo de negocio"},
-      {id:30,titulo:"Ponencia Magistral Jueves 9:45"},
-      {id:16,titulo:"Taller 3P, Filosofía Lean en tus manos"},
-      {id:17,titulo:"Taller Design Thinking and Lean Six Sigma"},
-      {id:31,titulo:"Ponencia Magistral Jueves 14:30"},
-      {id:32,titulo:"Caso de Éxito Jueves 15:30"},
-      {id:33,titulo:"Caso de Éxito Jueves 17:00"},
-      {id:34,titulo:"Party de Marquesina"}
+      {id:100000,titulo:"Nikay Bioproceso, S.R.L."},
+      {id:100001,titulo:"Gerdau MetalDOM"},
+      {id:100002,titulo:"Central Termoeléctrica Punta Catalina"},
+      {id:100003,titulo:"Laboratorios Rowe"},
+      {id:100004,titulo:"Agua Planeta Azul "},
+      {id:100005,titulo:"B Braun "},
+      {id:100006,titulo:"Rockwell Automation "},
+      {id:100007,titulo:"Industrias Nigua"},
+      {id:100008,titulo:"Quala Dominicana"},
+      {id:100009,titulo:"Haina International Terminals"},
+      {id:35,titulo:"Ponencia Cultural y Ceremonia de Clausura"}
       ];
     this.id_admin=0;
     this.id_admin = this.navParams.get('id_admin');
